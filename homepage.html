@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <title>Quizzy - Practice for tests</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    body,
+    html {
+        margin: 0px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        background-image:
+            url('./imgs/background.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+
+    .Header {
+        margin-left: 8px;
+        margin-right: 8px;
+        display: flex;
+        flex-direction: row;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        letter-spacing: 3px;
+        justify-content: space-between;
+    }
+
+    .Header img {
+        color: white;
+        width: 30px;
+        filter: brightness(0) invert(1);
+
+    }
+
+    .Header h2 {
+        background-color: blue;
+        font-style: italic;
+        padding-left: 5px;
+        padding-right: 3px;
+    }
+
+    hr {
+        margin-top: -7px;
+        color: grey;
+        width: 100%;
+        opacity: 0.1;
+    }
+
+    .hook {
+        margin-top: -10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: sans-serif;
+    }
+
+    .hook h2 {
+        color: grey;
+        font-family: "Josefin Sans", sans-serif;
+        letter-spacing: 3px;
+        color: white;
+
+    }
+
+    .hook span {
+        font-family: sans-serif;
+        font-style: italic;
+        color: gray;
+    }
+
+    .log {
+        margin-top: -7px;
+    }
+
+    .end-hook {
+        margin-top: 50px;
+        font-size: 0.8em;
+        line-height: 25px;
+        min-width: 300px;
+        text-transform: capitalize;
+
+        text-align: center;
+    }
+
+    button {
+        margin-top: 28px;
+        width: 180px;
+        height: 180px;
+        border-radius: 300px;
+        background-color: blue;
+        color: white;
+        border-style: none;
+        font-family: "Roboto", sans-serif;
+        font-family: sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        text-transform: capitalize;
+        transition: 1.2s ease-in-out
+    }
+
+    button:hover {
+        transform: rotate(360deg);
+    }
+</style>
+
+
+<body>
+    <div class="flex-container">
+        <div class="Header">
+            <img src="./imgs/icon.svg" alt="settings-bar">
+            <h2> RE-QUIZIT</h2>
+        </div>
+        <hr>
+
+        <div class="hook">
+            <h2><span> question it. quiz it.<br></span> </h2>
+            <h2 class="log">RE-QUIZIT.</h2>
+            <div class="end-hook">
+                <h2>A Flashcard Study Tool built for retention.
+                </h2>
+
+
+                <button onclick="pageCreate()"> Re-Quizit Now!</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
