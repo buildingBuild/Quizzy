@@ -4,11 +4,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create - Sets and Flash cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Quizzy - Practice for tests</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+<style>
+    body,
+    html {
+        margin: 0px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        background-image:
+            url('./imgs/createBG.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-y: hidden;
+
+    }
+
+    .Header {
+        margin-left: 8px;
+        margin-right: 8px;
+        display: flex;
+        flex-direction: row;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        letter-spacing: 3px;
+        justify-content: space-between;
+        position: sticky;
+    }
+
+    .Header img {
+        color: white;
+        width: 30px;
+        filter: brightness(0) invert(1);
+
+
+    }
+
+    .Header h2 {
+        background-color: hsl(203, 100%, 58%);
+        font-style: italic;
+        padding-left: 5px;
+        padding-right: 3px;
+    }
+
+    hr {
+        margin-top: -7px;
+        color: grey;
+        width: 100%;
+        opacity: 0.1;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 22px;
+        margin-right: 22px;
+        font-family: sans-serif;
+        color: white;
+    }
+
+    .main h1 {
+        text-align: center;
+        line-height: 40px;
+    }
+
+
+    .input-title {
+        display: flex;
+        flex-direction: column;
+        gap: -10px;
+    }
+
+
+    .input-title h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+    }
+
+    .input-title h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        margin-bottom: 7px;
+        letter-spacing: 2px;
+    }
+
+    .input-title input {
+        padding: 5px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: 1.5em;
+        border: 2px;
+        border-style: double;
+        border-color: hsl(203, 100%, 58%)
+    }
+
+    .plus {
+        margin-left: 22%;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+
+        background-color: hsl(203, 100%, 58%);
+        width: 150px;
+        height: 70px;
+        border-radius: 10px;
+        transition: 0.7s ease-in-out;
+    }
+
+    .plus img {
+        width: 55px;
+        margin-left: 32%;
+        filter: brightness(0) invert(1);
+    }
+
+    .plus:hover {
+        transform: scale(1.2);
+    }
+
+    .add {}
+</style>
 
 <body>
+    <div class="flex-container">
+        <div class="Header">
+            <img src="./imgs/icon.svg" alt="settings-bar">
+            <h2> RE-QUIZIT</h2>
+        </div>
+        <hr>
+        <div class="main">
+            <h1>CREATE A FLASHCARD SET</h1>
+            <div class="input-title">
+                <h3>Title </h3>
+                <input placeholder="AP Econ">
+            </div>
+            <br>
+            <div class="input-title">
+                <h3>Description (optional) </h3>
+                <input placeholder="Final Exam Preparation">
+            </div>
+            <div class="plus" onclick="validateSet()">
+                <img src="./imgs/add.svg" alt="add element" class="add">
+            </div>
 
+
+
+        </div>
+
+        <script src="sets.js" type="module"></script>
 </body>
 
 </html>
