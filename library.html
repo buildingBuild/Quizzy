@@ -33,7 +33,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
-        overflow-y: hidden;
+        overflow-y: scroll;
 
     }
 
@@ -74,11 +74,13 @@
     .main {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
         margin-left: 22px;
         margin-right: 22px;
         font-family: sans-serif;
         color: white;
+        gap: 30px;
     }
 
     .main h1 {
@@ -86,60 +88,13 @@
         line-height: 40px;
     }
 
-
-    .input-title {
-        display: flex;
-        flex-direction: column;
-        gap: -10px;
-    }
-
-
-    .input-title h3 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-    }
-
-    .input-title h3 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-        margin-bottom: 7px;
-        letter-spacing: 2px;
-    }
-
-    .input-title input {
-        padding: 5px;
-        height: 30px;
+    .setBox {
+        width: 250px;
+        height: 180px;
+        background-color: red;
         border-radius: 10px;
-        font-size: 1.5em;
-        border: 2px;
-        border-style: double;
-        border-color: hsl(203, 100%, 58%)
+
     }
-
-    .plus {
-        margin-left: 22%;
-        margin-top: 40px;
-        display: flex;
-        align-items: center;
-
-        background-color: hsl(203, 100%, 58%);
-        width: 150px;
-        height: 70px;
-        border-radius: 10px;
-        transition: 0.7s ease-in-out;
-    }
-
-    .plus img {
-        width: 55px;
-        margin-left: 32%;
-        filter: brightness(0) invert(1);
-    }
-
-    .plus:hover {
-        transform: scale(1.2);
-    }
-
-    .add {}
 </style>
 
 <body>
@@ -150,21 +105,17 @@
         </div>
         <hr>
         <div class="main">
-            <h1>CREATE A FLASHCARD SET</h1>
-            <div class="input-title">
-                <h3>Title </h3>
-                <input placeholder="AP Econ" id="theSetTitle">
+            <h1>My Library - <span style="background-color:  hsl(203, 100%, 58%); padding: 2px;">Collection of
+                    Sets</span> </h1>
+            <div class="setBox">
+                <h1> SET NAME</h1>
+                <h1> SET DESCRIPTION</h1>
             </div>
-            <br>
-            <div class="input-title">
-                <h3>Description (optional) </h3>
-                <input placeholder="Final Exam Preparation" id="theSetDescription">
-            </div>
-            <div class="plus" id="addSets">
-                <img src="./imgs/add.svg" alt="add element" class="add">
-            </div>
-
-
+            <div class="setBox"></div>
+            <div class="setBox"></div>
+            <div class="setBox"></div>
+            <div class="setBox"></div>
+            <div class="setBox"></div>
 
         </div>
 

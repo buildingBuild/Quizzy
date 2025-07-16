@@ -1,7 +1,8 @@
-function validateSet() {
 
-    console.log("hELLO")
-}
+const addSets = document.getElementById("addSets");
+const theSetTitle = document.getElementById("theSetTitle");
+const theSetDescription = document.getElementById("theSetDescription");
+addSets.addEventListener("click", validateSet);
 
 class Sets {
 
@@ -26,10 +27,21 @@ class Sets {
 
 };
 
+function validateSet() {
 
+    const title = theSetTitle.value;
+    if (title == "") {
+        window.alert("Enter Title for Set")
+        return;
+    }
+    const description = theSetDescription.value;
+    console.log(title);
+    console.log(description);
 
+    const newSet = new Sets(title, description);
+}
 
-//xport default Sets;
+export default Sets;
 /* 
 const flashCard = {
     question: "Enter a question",

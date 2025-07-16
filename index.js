@@ -10,3 +10,4 @@ function pageCreate() {
     window.location.href = "create.html"
 
 }
+
