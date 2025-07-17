@@ -26,6 +26,7 @@
     }
 
     .flex-container {
+        position: relative;
         display: flex;
         flex-direction: column;
         background-image:
@@ -139,6 +140,43 @@
         transform: scale(1.2);
     }
 
+    .notification {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: cornflowerblue;
+        border: 5px;
+        border-style: dashed;
+        border-color: white;
+        border-radius: 5px;
+        width: 80%;
+        height: 70px;
+        z-index: 100;
+        position: absolute;
+        top: 90px;
+        right: 8%;
+        bottom: 50%;
+        animation: fadeIn 1s ease-in-out
+    }
+
+    @keyframes fadeIn {
+
+        0% {
+            top: 0px;
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.5;
+
+        }
+
+        100% {
+            opacity: 1;
+            top: 900x;
+        }
+    }
+
     .add {}
 </style>
 
@@ -163,12 +201,13 @@
             <div class="plus" id="addSets">
                 <img src="./imgs/add.svg" alt="add element" class="add">
             </div>
-
-
-
+            <div class="notification">
+                <h1>Set Created</h1>
+            </div>
         </div>
+    </div>
 
-        <script src="sets.js" type="module"></script>
+    <script src="sets.js" type="module"></script>
 </body>
 
 </html>
